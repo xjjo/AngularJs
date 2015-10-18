@@ -1,0 +1,17 @@
+Module
+--------------------------------------------
+
+var app = angular.module('store', [ ]);
+<html ng-app="store">
+
+Expression
+--------------------------------------------
+{{"Hello, Angular!"}}
+
+
+JavaScript Closures
+--------------------------------------------
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
