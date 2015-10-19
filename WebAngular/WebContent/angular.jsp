@@ -8,11 +8,13 @@
     <script type="text/javascript" src="javascript/lib/app.js"></script>
   </head>
   <body ng-controller="StoreController as store">
-    <div class="product row">
-      <h3>
-        {{store.product.name}}
-        <em class="pull-right">{{store.product.price}}</em>
-      </h3>
+    <div style="margin: 0 auto; width: 75%;">
+	    <div class="product row">
+	      <h3>
+	        {{store.product.name}}
+	        <em class="pull-right">{{store.product.price}}</em>
+	      </h3>
+	    </div>
     </div>
   </body>
 </html>
