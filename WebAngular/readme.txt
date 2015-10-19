@@ -9,7 +9,7 @@ Branch - 3 : Directives
  - Generamos un arreglo de gemas
  - Agregamos una directiva "ng-repeat" para recorrer un arreglo
  -------------------------------------------
- Branch - 3 : Filters
+ Branch - 4 : Filters
  - Cambiamos la estructura del json de gemas, se le agrego un array de imagenes, comentarios y otras propiedades
  - Se cambio la implementacion de bootstrap.css a la del sitio codeSchool bootstrap.min.css
  - Se cagaron las imagenes denro de la carpeta /images/
