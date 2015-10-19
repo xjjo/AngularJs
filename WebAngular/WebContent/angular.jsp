@@ -9,11 +9,12 @@
   </head>
   <body ng-controller="StoreController as store">
     <div style="margin: 0 auto; width: 75%;">
-	    <div class="product row">
+	    <div ng-repeat="product in store.products" ng-hide="product.soldOut" class="product row">
 	      <h3>
-	        {{store.product.name}}
-	        <em class="pull-right">{{store.product.price}}</em>
+	        {{product.name}}
+	        <em class="pull-right">{{product.price}}</em>
 	      </h3>
+	      <button ng-show="product.canPurchase">Add to Cart</button>
 	    </div>
     </div>
   </body>
