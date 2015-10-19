@@ -15,3 +15,5 @@ Branch - 3 : Directives
  - Se cagaron las imagenes denro de la carpeta /images/
  - Se agrego una imagen grande y la galeria
  - Se quita la galeria si no tiene elementos con la directiva ng-show 
+ -------------------------------------------
+ 
