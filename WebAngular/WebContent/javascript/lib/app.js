@@ -7,16 +7,18 @@
 	];*/
 
 	var app = angular.module('gemStore', []);
-
+	//-------------------------------------------------------------------------------------
 	app.controller('StoreController', function() {
 		this.products = gems;
 	});
+	//-------------------------------------------------------------------------------------
 	app.controller('GalleryController', function(){
 	  	this.current = 0;
 		    this.setCurrent = function(value){
 		    	this.current = value || 0;
 		    };
 	 });
+	//-------------------------------------------------------------------------------------
 	app.controller('TabController', function() {
 		this.tab = 1;
 		this.setTab = function(setTab) {
@@ -26,7 +28,15 @@
 			return this.tab === selectedTab;
 		};
 	});  
-  
+	//-------------------------------------------------------------------------------------
+	app.controller('ReviewController', function() {
+		this.review = {};
+		this.addReview = function(product){
+			product.reviews.push(this.review);
+			this.review = {};
+		};
+	});
+	//-------------------------------------------------------------------------------------
 	 var gems = [{
 	      name: 'Azurite',
 	      description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",

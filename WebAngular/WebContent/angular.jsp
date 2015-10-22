@@ -56,27 +56,29 @@
 					</li>
 				</ul>
 				<!--  Review Form -->
-				<form name="reviewForm">
+				<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+					ng-submit="reviewCtrl.addReview(product)">
 					<!--  Live Preview -->
 					<blockquote>
-						<strong> Stars</strong> <cite class="clearfix">—</cite>
+						<strong>{{reviewCtrl.review.stars}} Stars</strong> <cite class="clearfix">— {{reviewCtrl.review.author}}</cite>
+						{{reviewCtrl.review.body}}
 					</blockquote>
 
 					<!--  Review Form -->
 					<h4>Submit a Review</h4>
 					<fieldset class="form-group">
-						<select class="form-control"
+						<select class="form-control" ng-model="reviewCtrl.review.stars"
 							ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
 							<option value="">Rate the Product</option>
 						</select>
 					</fieldset>
 					<fieldset class="form-group">
-						<textarea class="form-control"
+						<textarea class="form-control" ng-model="reviewCtrl.review.body"
 							placeholder="Write a short review of the product..."
 							title="Review"></textarea>
 					</fieldset>
 					<fieldset class="form-group">
-						<input type="email" class="form-control"
+						<input type="email" class="form-control" ng-model="reviewCtrl.review.author"
 							placeholder="jimmyDean@example.org" title="Email" />
 					</fieldset>
 					<fieldset class="form-group">
